@@ -4,63 +4,107 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="sources/index.css" />
+
     <title>Canned Sheet</title>
   </head>
   <body>
     <nav id="navbar">
-      <a
-        href="pages/opening_closing.html"
-        onclick="copyToClipboard(event, this)"
-        >Opening + Closing</a
-      >
-      <div class="copy-text">Text to copy</div>
+      <a href="#opening">Opening</a>
+      <a href="#ADONP">ADONP DUAL DEBIT</a>
+      <a href="#comment-format">Comment Format</a>
+      <a href="#delay_in_delivery">Delay in Delivery</a>
+      <a href="#wrong_item">Wrong Item</a>
+      <a href="#MDND">MDND</a>
+      <a href="#item_missing">Item Missing</a>
     </nav>
-    <main>
-      <h1>Canned Sheet</h1>
-      <div id="content">
+    <main id="main">
+      <!-- <h1>Canned Sheet</h1> -->
+
+      <div class="content" id="opening">
+        <h4>Opening</h4>
         <div>
-          <p>
-            This is a simple HTML page that demonstrates how to copy text to the
-            clipboard using the Clipboard API.
+          <p class="main-content">
+            Hi, I’m Faisal and I’ll be assisting you today.
           </p>
-          <div id="copy-btn">Copy</div>
+          <button id="copy-btn">Copy</button>
         </div>
       </div>
-      <div id="content">
+      <div class="content" id="ADONP">
+        <h4>ADONP</h4>
         <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-            autem facilis nulla amet recusandae. Quis sed incidunt accusamus
-            eligendi itaque sint omnis veniam aliquam vel dicta et molestiae
-            eaque quas assumenda beatae excepturi, voluptatem officia! Deleniti
-            suscipit, esse odit amet atque illum temporibus beatae labore sint.
-            Qui nisi distinctio saepe.
+          <p class="main-content">
+            As I understand your amount has been debited but the order has not
+            placed.I apologize for the inconvenience you've faced. But don't
+            worry; I'll try my best to fix this for you.
           </p>
-          <div id="copy-btn">Copy</div>
+          <button id="copy-btn">Copy</button>
+        </div>
+      </div>
+      <div class="content" id="comment-format">
+        <h4>Comment</h4>
+        <div>
+          <p class="main-content">
+            <b> LOB:</b> Chat Slots <br /><b> Available? : </b> Yes/No/NA<br />
+            <b>Stock Available? :</b> Yes/No/NA<br />
+            <b> Cx Current Karma:</b><br />
+            <b> Called SM/DP:</b> Yes/No/NA <br />
+            <b> Chat/Call Summary:</b> Chat ID//VOC//Item Name &
+            Quantity//Investigation//Resolution<br />
+            <b> Asked to come back later:</b> Yes/No/NA <br />
+            <b> Tags Added:</b>
+            Yes/No/NA
+          </p>
+          <button id="copy-btn">Copy</button>
+        </div>
+      </div>
+      <div class="content" id="delay_in_delivery">
+        <h4>Delay in Delivery</h4>
+        <div>
+          <p class="main-content">
+            As I understand your order has been delayed. I apologize for the
+            inconvenience you've faced. But don't worry; I'll try my best to fix
+            this for you.
+          </p>
+          <button id="copy-btn">Copy</button>
+        </div>
+      </div>
+      <div class="content" id="wrong_item">
+        <h4>Wrong Item</h4>
+        <div>
+          <p class="main-content">
+            I regret the inconvenience you've experienced with your recent order
+            delivery and sincerely apologize for the mix-up. I would request you
+            to please share the images of the wrong item you received so that I
+            can assist you.
+          </p>
+          <button id="copy-btn">Copy</button>
+        </div>
+      </div>
+      <div class="content" id="MDND">
+        <h4>MDND</h4>
+        <div>
+          <p class="main-content">
+            As I understand your order has been marked delivered but not
+            delivered to you yet. I apologize for the inconvenience you've
+            faced. But don't worry, I'll try my best to fix this for you.
+          </p>
+          <button id="copy-btn">Copy</button>
+        </div>
+      </div>
+      <div class="content" id="item_missing">
+        <h4>Item Missing</h4>
+        <div>
+          <p class="main-content">
+            As I understand that you didn’t receive an item in your order. I
+            apologize for the inconvenience you've faced. But don't worry; I'll
+            try my best to fix this for you.
+          </p>
+          <button id="copy-btn">Copy</button>
         </div>
       </div>
     </main>
     <div id="copy-modal">Copied</div>
+    <a href="#navbar" id="topBtn">Top</a>
   </body>
-  <script>
-    document.addEventListener("click", (e) => {
-      var parent = null;
-      var text = "";
-      if (e.target.id === "copy-btn") {
-        parent = e.target.parentElement;
-        text = parent.querySelector("p").innerText.trim();
-        navigator.clipboard.writeText(text);
-        document.getElementById("copy-modal").style.transition = "all 0.3s";
-        document.getElementById("copy-modal").style.opacity = "1";
-        document.getElementById("copy-modal").style.top = "40%";
-        setTimeout(() => {
-          document.getElementById("copy-modal").style.opacity = "0";
-          document.getElementById("copy-modal").style.top = "50%";
-        }, 1000);
-      }
-      console.log("Copied content: ", text);
-      //   console.log(parent.querySelector("p").innerHTML);
-      //   console.log(text);
-    });
-  </script>
+  <script src="sources/index.js"></script>
 </html>

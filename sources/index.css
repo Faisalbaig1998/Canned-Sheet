@@ -1,50 +1,79 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quintessential&display=swap");
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 #navbar {
   display: flex;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  flex-wrap: wrap;
   width: 100%;
-  height: 50px;
+  gap: 10px;
+  min-height: 50px;
+  height: auto;
   background-color: #add1ec;
+  padding: 10px;
 }
 
 #navbar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
   width: auto;
-  height: 20px;
-  border-radius: 40px;
+  /* border-radius: 40px; */
   text-decoration: none;
   color: black;
   border: 2px solid black;
-  background-color: rgb(171, 245, 86);
-  /* font-size: 20px; */
-  margin: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  /* background-color: rgb(171, 245, 86); */
+  /* margin: 10px; */
 }
 
+.content h4::after {
+  content: ":-";
+  display: inline-block;
+  height: 2px;
+}
 #copy-btn {
   width: 60px;
-  height: 25px;
-  border-radius: 2px;
+  height: 30px;
+  border-radius: 20px;
   text-align: center;
-  background-color: gray;
+  /* background-color: lawngreen; */
+  background-color: #70eb1582;
   vertical-align: text-bottom;
-  /* border: 1px solid black; */
-  color: white;
-  float: right;
+  font-size: 100%;
+  color: black;
+  border: 1px solid black;
+  float: left;
+  margin-top: 10px;
+  /* top: 20px; */
   font-family: "Source Code Pro", serif;
 }
 
-#content {
+.content {
   display: flex;
   flex-direction: column;
   padding: 15px;
-  width: 80%;
+  width: 90%;
   border: 2px solid black;
   height: auto;
-  margin: 20px;
+  /* background-color: rgb(95, 216, 8); */
+  /* background-image: linear-gradient(
+    90deg,
+    rgb(227, 212, 50) 0%,
+    rgb(222, 39, 39) 100%
+  ); */
+  /* background-image: linear-gradient(45deg, #f3ec78, #af4261); */
 }
 
 #copy-modal {
@@ -66,4 +95,47 @@
   background-color: rgba(31, 220, 41, 0.767);
   transition: all 0.5s;
   z-index: 1;
+}
+
+.content h4 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 10px;
+  color: blue;
+
+  /* background-color: rgb(194, 236, 29); */
+}
+
+#main {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* border: 2px solid red; */
+  width: 100%;
+}
+
+.main-content {
+  /* font-family: "Quintessential", cursive; */
+  /* background-color: rgb(95, 216, 8); */
+  font-size: 20px;
+}
+
+#topBtn {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-family: playfair display;
+  /* font-size: 20px; */
+  width: 60px;
+  /* height: 40px; */
+  padding: 10px;
+  background-color: aquamarine;
+  border: none;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.345);
 }
