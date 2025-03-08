@@ -9,13 +9,20 @@
   </head>
   <body>
     <nav id="navbar">
+      <a href="/pages/waiting.html" class="pages">Waiting Responses</a>
+      <a href="/pages/delay_in_delivery.html" class="pages"
+        >Delay in Delivery</a
+      >
+      <a href="/pages/mdnd.html " class="pages">MDND</a>
       <a href="#opening">Opening</a>
+      <a href="#service_no">Service No</a>
       <a href="#ADONP">ADONP DUAL DEBIT</a>
-      <a href="#comment-format">Comment Format</a>
-      <a href="#delay_in_delivery">Delay in Delivery</a>
       <a href="#wrong_item">Wrong Item</a>
       <a href="#MDND">MDND</a>
       <a href="#item_missing">Item Missing</a>
+      <a href="#refund_status">Refund Status</a>
+      <a href="#refund_preference">Choice or Refund Preference</a>
+      <a href="#damaged">Damaged</a>
     </nav>
     <main id="main">
       <!-- <h1>Canned Sheet</h1> -->
@@ -26,7 +33,19 @@
           <p class="main-content">
             Hi, I’m Faisal and I’ll be assisting you today.
           </p>
-          <button id="copy-btn">Copy</button>
+        </div>
+      </div>
+      <div class="content" id="service_no">
+        <h4>Service No</h4>
+        <div>
+          <p class="main-content">
+            Your feedback is valuable for improvement. Please share your
+            thoughts with a quick rating.
+          </p>
+          <p class="main-content">
+            Thank you for choosing Blinkit, please know we're continuously
+            working to improve your experience with us.
+          </p>
         </div>
       </div>
       <div class="content" id="ADONP">
@@ -34,40 +53,22 @@
         <div>
           <p class="main-content">
             As I understand your amount has been debited but the order has not
-            placed.I apologize for the inconvenience you've faced. But don't
+            placed. I apologize for the inconvenience you've faced. But don't
             worry; I'll try my best to fix this for you.
           </p>
-          <button id="copy-btn">Copy</button>
         </div>
       </div>
-      <div class="content" id="comment-format">
-        <h4>Comment</h4>
+      <div class="content" id="refund_status">
+        <h4>Refund Status</h4>
         <div>
           <p class="main-content">
-            <b> LOB:</b> Chat Slots <br /><b> Available? : </b> Yes/No/NA<br />
-            <b>Stock Available? :</b> Yes/No/NA<br />
-            <b> Cx Current Karma:</b><br />
-            <b> Called SM/DP:</b> Yes/No/NA <br />
-            <b> Chat/Call Summary:</b> Chat ID//VOC//Item Name &
-            Quantity//Investigation//Resolution<br />
-            <b> Asked to come back later:</b> Yes/No/NA <br />
-            <b> Tags Added:</b>
-            Yes/No/NA
+            As I understand you want to know the refund status. I apologize for
+            the inconvenience you've faced. But don't worry; I'll try my best to
+            fix this for you.
           </p>
-          <button id="copy-btn">Copy</button>
         </div>
       </div>
-      <div class="content" id="delay_in_delivery">
-        <h4>Delay in Delivery</h4>
-        <div>
-          <p class="main-content">
-            As I understand your order has been delayed. I apologize for the
-            inconvenience you've faced. But don't worry; I'll try my best to fix
-            this for you.
-          </p>
-          <button id="copy-btn">Copy</button>
-        </div>
-      </div>
+
       <div class="content" id="wrong_item">
         <h4>Wrong Item</h4>
         <div>
@@ -77,7 +78,6 @@
             to please share the images of the wrong item you received so that I
             can assist you.
           </p>
-          <button id="copy-btn">Copy</button>
         </div>
       </div>
       <div class="content" id="MDND">
@@ -88,7 +88,6 @@
             delivered to you yet. I apologize for the inconvenience you've
             faced. But don't worry, I'll try my best to fix this for you.
           </p>
-          <button id="copy-btn">Copy</button>
         </div>
       </div>
       <div class="content" id="item_missing">
@@ -99,12 +98,31 @@
             apologize for the inconvenience you've faced. But don't worry; I'll
             try my best to fix this for you.
           </p>
-          <button id="copy-btn">Copy</button>
+        </div>
+      </div>
+      <div class="content" id="refund_preference">
+        <h4>Choice or Refund Preference</h4>
+        <div>
+          <p class="main-content">
+            To ensure your satisfaction with the refund process, could you
+            please specify your preference: refund to your original payment
+            method or as a promo code?
+          </p>
+        </div>
+      </div>
+      <div class="content" id="damaged">
+        <h4>Damaged</h4>
+        <div>
+          <p class="main-content">
+            I understand that you received a damaged item, and I want to
+            apologize for any inconvenience this has caused. Please rest assured
+            that I will do my best to resolve this issue for you.
+          </p>
         </div>
       </div>
     </main>
     <div id="copy-modal">Copied</div>
     <a href="#navbar" id="topBtn">Top</a>
   </body>
-  <script src="sources/index.js"></script>
+  <script src="/sources/index.js"></script>
 </html>

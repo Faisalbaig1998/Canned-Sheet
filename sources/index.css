@@ -10,7 +10,20 @@
   scroll-behavior: smooth;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.pages {
+  background-color: rgba(255, 95, 95, 0.466);
+}
 #navbar {
+  user-select: none;
+  /* position: fixed; */
+  top: 0;
   display: flex;
   /* flex-direction: column; */
   /* justify-content: center; */
@@ -29,13 +42,12 @@
   justify-content: center;
   padding: 10px;
   width: auto;
-  /* border-radius: 40px; */
+  border-radius: 40px;
   text-decoration: none;
   color: black;
   border: 2px solid black;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   /* background-color: rgb(171, 245, 86); */
-  /* margin: 10px; */
 }
 
 .content h4::after {
@@ -48,19 +60,26 @@
   height: 30px;
   border-radius: 20px;
   text-align: center;
-  /* background-color: lawngreen; */
   background-color: #70eb1582;
-  vertical-align: text-bottom;
   font-size: 100%;
-  color: black;
+  /* color: black; */
   border: 1px solid black;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   float: left;
   margin-top: 10px;
-  /* top: 20px; */
   font-family: "Source Code Pro", serif;
 }
 
+#copy-btn:hover {
+  cursor: pointer;
+  background-color: #70eb15;
+}
+#copy-btn:active {
+  background-color: green;
+}
+
 .content {
+  user-select: none;
   display: flex;
   flex-direction: column;
   padding: 15px;
@@ -86,7 +105,9 @@
   text-align: center;
   left: 50%;
   top: 50%;
-  width: 10%;
+  /* width: 10%; */
+  width: auto;
+  padding: 10px;
   height: 40px;
   border-radius: 4px;
   font-size: 20px;
@@ -95,6 +116,7 @@
   background-color: rgba(31, 220, 41, 0.767);
   transition: all 0.5s;
   z-index: 1;
+  overflow: hidden;
 }
 
 .content h4 {
@@ -106,6 +128,7 @@
 }
 
 #main {
+  margin-top: auto;
   display: flex;
   padding: 10px;
   flex-direction: column;
@@ -123,6 +146,7 @@
 }
 
 #topBtn {
+  user-select: none;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -138,4 +162,22 @@
   background-color: aquamarine;
   border: none;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.345);
+}
+
+.list-content {
+  padding: 10px;
+  text-wrap: wrap;
+  border: 2px solid black;
+}
+
+.list-content ol {
+  margin-left: 20px;
+}
+
+.list-content ol li {
+  margin-bottom: 10px;
+}
+
+.list-content ol li:last-child {
+  margin-bottom: 0;
 }
