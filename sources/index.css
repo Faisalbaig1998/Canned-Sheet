@@ -10,11 +10,12 @@
   scroll-behavior: smooth;
 }
 
-.sticky {
+.fixed {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
+  transition: all 0.5s;
 }
 
 .pages {

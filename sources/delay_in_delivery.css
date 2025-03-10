@@ -55,6 +55,7 @@ h6 {
   /* border: 2px solid red; */
   display: flex;
   flex-direction: column;
+  font-size: 20px;
   padding: 10px;
   gap: 10px;
 }
@@ -76,7 +77,7 @@ h6 {
   display: flex;
   flex-direction: column;
   right: 20px;
-  width: 250px;
+  width: 300px;
   border: 2px solid green;
 }
 
@@ -90,6 +91,7 @@ h6 {
 }
 
 .list {
+  user-select: all;
   text-align: justify;
   text-wrap: wrap;
   margin-left: 20px;
@@ -100,10 +102,11 @@ h6 {
   padding: 5px;
 }
 
+.list li p {
+  width: 70%;
+}
+
 .main-content {
-  /* font-family: "Quintessential", cursive; */
-  /* background-color: rgb(95, 216, 8); */
-  font-size: 15px;
   width: 70%;
 }
 
@@ -113,7 +116,6 @@ h6 {
   border-radius: 20px;
   text-align: center;
   background-color: #70eb1582;
-  font-size: 100%;
   /* color: black; */
   border: 1px solid black;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -152,4 +154,11 @@ h6 {
   transition: all 0.5s;
   z-index: 1;
   overflow: hidden;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }

@@ -24,13 +24,22 @@ function copyfunc() {
   setTimeout(() => {
     document.getElementById("copy-modal").style.opacity = "0";
     document.getElementById("copy-modal").style.top = "50%";
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
   }, 400);
 }
 
-// window.onscroll = function () {
-//   const navbar = document.getElementById("navbar");
-//   if (window.scrollY > 50) {
-//     navbar.classList.add("sticky");
-//   }
-// };
+window.onscroll = function () {
+  const navbar = document.getElementById("navbar");
+  if (window.scrollY > 10) {
+    navbar.classList.add("fixed");
+  }
+  if (window.scrollY < 10) {
+    navbar.classList.remove("fixed");
+  }
+};
+
+document.getElementById("promo-code").onclick = function () {
+  const elem = document.getElementById("promo-code");
+  navigator.clipboard.writeText(elem.innerText.trim());
+  copyfunc();
+};
